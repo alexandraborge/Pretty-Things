@@ -1,0 +1,40 @@
+h1 {
+  font-family: cursive;
+  margin-top: 50px;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 18px;
+
+}
+
+/* new_post page */
+.boxes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titlebox {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 500px;
+}
+
+.wordbox {
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 500px;
+  height:500px;
+}
+
+.submit {
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+}
