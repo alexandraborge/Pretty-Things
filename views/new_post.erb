@@ -9,9 +9,11 @@
     <h1>Create New Post</h1>
     <!--add insert picture area later-->
     <div class="boxes">
-      <textarea class="titlebox" placeholder="Write title of your post here..."></textarea>
-      <textarea class='wordbox' placeholder="Start writing here..."></textarea>
-      <input class="submit" type="submit" value="Submit">
+      <form class="post" action="/" method="post">
+        <input class="titlebox" placeholder="Write title of your post here..." name="title" type="text">
+        <input class='wordbox' placeholder="Start writing here..." name="writing" type="text">
+        <input id="Submit" type="Submit" value="Submit">
+      </form>
     </div>
   </body>
 </html>
