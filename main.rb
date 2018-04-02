@@ -9,5 +9,20 @@ get '/new' do
 end
 
 post '/' do
-  #create a new html file for each form submitted and send the info submitted in the params to the home page
+  title = params[:title]
+  body = params[:body]
+#creates new html file for each time the post gets submitted
+  File.open("public/blog_posts/" + title + ".html", "w")  do |f|
+#write the title and body submitted to that file
+    f.write(title)
+    f.write(body)
+  end
+  erb :home
+  #post title links to the homepage "/"
+end
+
+get '/:title' do
+  blog_post = File.join(".", "public", "blog_posts", "#{params[:title]}.html")
+
+  send_file(blog_post)
 end
