@@ -21,8 +21,9 @@ post '/' do
   #post title links to the homepage "/"
 end
 
-get '/:title' do
-  blog_post = File.join(".", "public", "blog_posts", "#{params[:title]}.html")
-
-  send_file(blog_post)
+get "/:title" do
+  #joins the file paths together and stores it into a variable
+  post_file = File.join("public", "blog_posts", "#{params[:title]}.html")
+  #takes the data in that file path above and shows it when user is in the URL path above "/:title"
+  send_file(post_file)
 end
