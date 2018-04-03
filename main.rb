@@ -13,14 +13,14 @@ get '/submitted' do
 end
 
 post '/' do
-  title = params[:title]
+  @title = params[:title]
   body = params[:body]
 
   # creates new html file for each time the post gets submitted
-  File.open("public/blog_posts/" + title + ".html", "w")  do |f|
+  File.open("public/blog_posts/" + @title + ".html", "w")  do |f|
 
     #write the title and body submitted to that file
-    f.write(title)
+    f.write(@title)
     f.write(body)
   end
   # post title links to the homepage "/"

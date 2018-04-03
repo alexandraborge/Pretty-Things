@@ -1,5 +1,6 @@
 body {
   border: 50px solid yellow;
+
 }
 
 h1 {
@@ -16,8 +17,11 @@ button {
 
 }
 
-.unordered-list {
-  border: 1px solid green;
+.post_parent {
+  border: 1px solid black;
+
 }
 
-/* new_post page */
+.post_squares {
+  border: 2px, solid red;
+}

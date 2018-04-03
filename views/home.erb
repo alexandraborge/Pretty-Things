@@ -7,18 +7,18 @@
   </head>
   <body>
     <h1>Pretty Things</h1>
+    <p>Where people write about beautiful things that inspire them</p>
     <button type="button" class="new_post_button"><a href="/new">Create New Post</a></button>
-    <div class="posts">
-      <p>Here are some posts </p>
+    <div class="post_parent col-sm-6 col-md-4">
+      <p>Here are some posts</p>
 
-      <%#create a unordered list%>
-      <ul class="unordered-list">
-        <%#creates an array of paths for the posts using Dir
-        and  will print the path of each post in a bulletted list%>
-        <% Dir["public/blog_posts/*.html"].each do |file| %>
-          <li><%= file %></li>
+        <%#creates an array of file paths for the posts using the method Dir
+        and  will print the file path of each post in a bulletted list%>
+        <% blogs_arr = Dir["public/blog_posts/*.html"] %>
+        <% blogs_arr.each do |f| %>
+            <%#need to link all of these posts!!%>
+            <div class="post_squares"><%=f%></div>
         <% end %>
-      </ul>
     </div>
   </body>
 </html>
