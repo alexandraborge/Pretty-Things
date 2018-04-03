@@ -8,17 +8,26 @@ get '/new' do
   erb :new_post
 end
 
+get '/submitted' do
+  erb :submit
+end
+
 post '/' do
   title = params[:title]
   body = params[:body]
-#creates new html file for each time the post gets submitted
+
+  # creates new html file for each time the post gets submitted
   File.open("public/blog_posts/" + title + ".html", "w")  do |f|
-#write the title and body submitted to that file
+
+    #write the title and body submitted to that file
     f.write(title)
     f.write(body)
   end
-  erb :home
-  #post title links to the homepage "/"
+  # post title links to the homepage "/"
+
+  #shows you to '/submitted' page
+  erb :submit
+
 end
 
 get "/:title" do
